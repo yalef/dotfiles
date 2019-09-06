@@ -171,7 +171,7 @@ bar {
 	colors {
 	background #000000
 		
-				#border	#bckgd	#foregd
+				#border	 #bckgd	  #foregd
 	focused_workspace	#000000 #000000 #ffffff
         inactive_workspace 	#000000 #000000 #888888
 	}
@@ -203,7 +203,7 @@ exec --no-startup-id nm-applet
 
 #colors
 set $FOCUS #E3E4E6
-set $UNFOCUS #000000
+set $UNFOCUS #161616
 
 # Layout colors 	   	 bord 	bg 	text    indicator (split)
 client.focused 			$FOCUS $FOCUS $UNFOCUS $FOCUS
