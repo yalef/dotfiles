@@ -1,0 +1,29 @@
+
+
+#[batterybar]
+#command=~/.config/i3blocks/batterybar
+#label=bat:
+#interval=5
+#markup=pango
+#min_width=bat:■■■■■
+#C1=#ff0027
+#C2=#ff3b05
+#C3=#ffb923
+#C4=#ffd000
+#C5=#e4ff00
+#C6=#adff00
+#C7=#6dff00
+#C8=#10ba00
+#CHARGING_COLOR=#00afe3
+#FULL_COLOR=#ffffff
+#AC_COLOR=#535353
+
+# AUR package: xkb-switch
+[keymap]
+label=⌨ :
+command= bash -c 'xkb-switch;xkb-switch -W'
+interval=persist
+
+[time]
+command=date '+%H:%M'
+interval=5
