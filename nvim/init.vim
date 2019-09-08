@@ -52,6 +52,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 "deoplete settings
 let g:deoplete#enable_at_startup = 1
+set completeopt-=preview
 
 "ale settings
 let g:ale_sign_error = '>>'     "'✗'
