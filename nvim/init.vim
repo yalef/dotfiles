@@ -11,7 +11,7 @@ Plug 'scrooloose/nerdcommenter'
 "Code
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'  "pip3 install --user jedi pynvim
-Plug 'dense-analysis/ale'   "pip3 install flake8
+Plug 'dense-analysis/ale'   "pip3 install flake8 autopep8
 call plug#end()
 filetype plugin indent on
 
@@ -54,11 +54,16 @@ map <C-n> :NERDTreeToggle<CR>
 let g:deoplete#enable_at_startup = 1
 
 "ale settings
-let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '⚠'
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_text_changed = 'never'
+let g:ale_sign_error = '>>'     "'✗'
+let g:ale_sign_warning = '!!'       "'⚠'
+let g:ale_lint_on_enter = 1
+" If you want to run linters only on save
+"let g:ale_lint_on_text_changed = 'never'
+"let g:ale_lint_on_insert_leave = 0
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_linters = {'python': ['flake8']}
+let b:ale_fixers = {'python':['autopep8']}
+let b:ale_warn_about_trailing_whitespace = 0
+map <F3> :ALEFix<CR>
