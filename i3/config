@@ -190,6 +190,9 @@ bindsym Print exec --no-startup-id scrot
 #border
 for_window [class=".*"] border pixel 3
 
+#lock when laptop lid has been closed
+exec --no-startup-id xss-lock -- ~/.config/i3/lock.sh   #need to install xss-lock
+
 #gaps
 gaps inner 10
 #gaps outer -10
