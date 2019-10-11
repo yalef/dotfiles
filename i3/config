@@ -198,6 +198,9 @@ smart_borders on
 #feh
 exec --no-startup-id feh --bg-fill ~/Wallpapers/1
 
+#i3lock
+bindsym ctrl+$mod+l exec --no-startup-id i3lock
+
 #wifi applet
 exec --no-startup-id nm-applet
 
