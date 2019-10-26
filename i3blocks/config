@@ -1,11 +1,11 @@
 
 
-#[batterybar]
-#command=~/.config/i3blocks/batterybar
-#label=bat:
-#interval=5
-#markup=pango
-#min_width=bat:■■■■■
+[batterybar]
+command=~/.config/i3blocks/batterybar
+label=bat:
+interval=5
+markup=pango
+min_width=bat:■■■■■
 #C1=#ff0027
 #C2=#ff3b05
 #C3=#ffb923

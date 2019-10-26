@@ -75,4 +75,7 @@ map <F3> :ALEFix<CR>
 map <C-c> "+y
 "paste ctrl+v
 map <C-v> "+p
-
+"ctrl + z - undo
+:map <C-z> u
+"ctrl + f - find
+:map <C-f> /
