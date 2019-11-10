@@ -44,7 +44,7 @@ set shiftwidth=4
 
 "lightline settings
 let g:lightline = {
-      \ 'colorscheme': 'OldHope',}
+      \ 'colorscheme': 'wombat',}
 
 "NerdTree settings
 "ctrl+ww - switch
