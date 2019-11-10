@@ -27,7 +27,7 @@ endif
 
 let base16colorspace=256
 set background=dark
-
+set noshowmode
 
 set nobackup
 set noswapfile
@@ -44,7 +44,11 @@ set shiftwidth=4
 
 "lightline settings
 let g:lightline = {
-      \ 'colorscheme': 'wombat',}
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'right': [[ 'percent' ],
+      \              [ 'fileencoding', 'filetype'] ]}
+      \ }
 
 "NerdTree settings
 "ctrl+ww - switch
