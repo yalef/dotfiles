@@ -7,7 +7,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'chriskempson/base16-vim'
 "Text-editing
 Plug 'jiangmiao/auto-pairs'
-Plug 'scrooloose/nerdcommenter'
 "Code
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'  "pip3 install --user jedi pynvim
