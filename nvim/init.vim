@@ -72,7 +72,7 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_linters = {'python': ['flake8']}
 let g:ale_fixers = {'python':['autopep8']}
 let b:ale_warn_about_trailing_whitespace = 0
-map <F3> :ALEFix<CR>
+map <F3> :ALEFix<CR> 
 
 "Key Bindings
 "install xclip for copy/cut work correctly
@@ -81,6 +81,6 @@ map <C-c> "+y
 "paste ctrl+v
 map <C-v> "+p
 "ctrl + z - undo
-:map <C-z> u
+map <C-z> u
 "ctrl + f - find
-:map <C-f> /
+map <C-f> /
