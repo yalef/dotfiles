@@ -44,7 +44,7 @@ set shiftwidth=4
 
 "lightline settings
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'powerlineish',
       \ 'active': {
       \   'right': [[ 'percent' ],
       \              [ 'fileencoding', 'filetype'] ]}
