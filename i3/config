@@ -182,9 +182,11 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -q sset Master,0 5+ un
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -q sset Master,0 5- unmute"
 bindsym XF86AudioMute exec --no-startup-id "amixer -q sset Master,0 toggle"
 #volume icon
+#sudo pacman -S volumeicon
 exec --no-startup-id volumeicon
 
 #bind for screenshot
+#sudo pacman -S scrot
 bindsym Print exec --no-startup-id scrot
 
 #border
@@ -196,13 +198,19 @@ gaps inner 10
 smart_borders on
 
 #feh
-exec --no-startup-id feh --bg-fill ~/Wallpapers/1
+#sudo pacman -S feh
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper16.jpg
 
 #i3lock
 bindsym ctrl+$mod+l exec --no-startup-id i3lock
 
 #wifi applet
+#sudo pacman -S network-manager-applet
 exec --no-startup-id nm-applet
+
+#battery applet
+#sudo pacman -S cbatticon
+exec --no-startup-id cbatticon -i symbolic
 
 #colors
 set $FOCUS #E3E4E6
