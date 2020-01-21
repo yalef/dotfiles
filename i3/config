@@ -199,7 +199,7 @@ smart_borders on
 
 #feh
 #sudo pacman -S feh
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper16.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper17.jpg
 
 #i3lock
 bindsym ctrl+$mod+l exec --no-startup-id i3lock
