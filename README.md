@@ -7,4 +7,4 @@ There are my setup of some linux programms.
 5.    [ranger](https://github.com/yalef/dotfiles/tree/master/ranger)
 6.    [tmux](https://github.com/yalef/dotfiles/blob/master/.tmux.conf)
 
-![example pic of my dotfiles](https://i.ibb.co/9W7qqpz/2019-10-28-192855-1366x768-scrot.png)
+![example pic of my dotfiles](https://i.imgur.com/evLskMa.png)
