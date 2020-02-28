@@ -32,6 +32,8 @@ set noshowmode
 set nobackup
 set noswapfile
 set nowritebackup
+set encoding=utf-8
+set fileencodings=utf8,cp1251
 
 " Search configuration
 set ignorecase                    " ignore case when searching
@@ -41,6 +43,8 @@ set smartcase                     " turn on smartcase
 set expandtab
 set tabstop=4
 set shiftwidth=4
+set autoindent  "autotab
+set showtabline=1
 
 "lightline settings
 let g:lightline = {
