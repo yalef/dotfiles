@@ -1,5 +1,5 @@
 [options]
-font = Ubuntu Mono 12
+#font = Ubuntu Mono 12
 [colors]
 
 background = #161616
