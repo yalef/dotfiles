@@ -1,5 +1,5 @@
 configuration {
-	display-drun:   "run app";
+	display-drun:   "";
 	display-run:    "execute";
 	display-window: "window";
 	show-icons:     false;
