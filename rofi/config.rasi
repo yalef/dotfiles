@@ -1,0 +1,17 @@
+configuration {
+	display-drun:   "run app";
+	display-run:    "execute";
+	display-window: "window";
+	show-icons:     false;
+	//sidebar-mode:   true;
+    theme: "/usr/share/rofi/themes/solarized.rasi";
+   }
+
+window {
+	location:	 center;
+	anchor:		 center;
+	height:		 15%;
+	width:		 25%;
+	orientation: horizontal;
+}
+
