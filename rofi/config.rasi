@@ -3,15 +3,17 @@ configuration {
 	display-run:    "execute";
 	display-window: "window";
 	show-icons:     false;
-	//sidebar-mode:   true;
-    theme: "/usr/share/rofi/themes/solarized.rasi";
+    theme : "arc";
+    //theme: "/usr/share/rofi/themes/solarized.rasi";
+    lines: 5;
    }
 
 window {
 	location:	 center;
 	anchor:		 center;
-	height:		 15%;
+	//height:		 15%;
 	width:		 25%;
 	orientation: horizontal;
 }
+
 
