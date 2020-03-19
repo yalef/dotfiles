@@ -1,5 +1,7 @@
 [options]
-#font = Ubuntu Mono 12
+font = Hack 10
+#font = Cascadia Code 10
+
 [colors]
 
 background = #161616
