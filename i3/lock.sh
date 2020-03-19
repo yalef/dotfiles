@@ -10,3 +10,4 @@ mogrify -blur 0x4 /home/yalef/scrot.png
 
 # Lock screen displaying this image
 i3lock -i /home/yalef/scrot.png --ignore-empty-password
+rm /home/yalef/scrot.png
