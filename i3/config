@@ -220,7 +220,7 @@ exec --no-startup-id cbatticon -i symbolic
 #sudo pacman -S xss-lock imagemagick
 #chmod +x lock.sh
 exec --no-startup-id xss-lock -- ~/.config/i3/lock.sh
-
+exec --no-startup-id xset -display :0 s off -dpms
 #colors
 set $FOCUS #E3E4E6
 set $UNFOCUS #161616
