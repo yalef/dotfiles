@@ -87,3 +87,5 @@ map <C-v> "+p
 map <C-z> u
 "ctrl + f - find
 map <C-f> /
+"disable command line window
+map q: <Nop>
