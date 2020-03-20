@@ -1,5 +1,6 @@
 [options]
-font = Hack 10
+#font = Hack 10
+font = Terminus 
 #font = Cascadia Code 10
 
 [colors]
