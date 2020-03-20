@@ -169,6 +169,7 @@ bindsym $mod+r mode "resize"
 bar {
     status_command i3blocks -c ~/.config/i3blocks/config 
 	i3bar_command i3bar -t
+    separator_symbol " "
     colors { 
 
 	background #000000
@@ -203,7 +204,7 @@ smart_borders on
 
 #feh
 #sudo pacman -S feh
-exec --no-startup-id feh --bg-fill ~/.config/Wallpapers/wallpaper17.jpg
+exec --no-startup-id feh --bg-fill ~/.config/Wallpapers/wallpaper20.jpg
 
 #i3lock
 bindsym ctrl+$mod+l exec --no-startup-id sh .config/i3/lock.sh
