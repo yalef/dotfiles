@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Monospaced 11
+font pango: Monospaced 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -168,7 +168,7 @@ bindsym $mod+r mode "resize"
 
 bar {
     status_command i3blocks -c ~/.config/i3blocks/config 
-	i3bar_command i3bar -t
+	#i3bar_command i3bar -t
     separator_symbol " "
     colors { 
 
@@ -195,7 +195,7 @@ exec --no-startup-id volumeicon
 bindsym Print exec --no-startup-id scrot
 
 #border
-for_window [class=".*"] border pixel 3
+for_window [class=".*"] border pixel 5
 
 #gaps
 gaps inner 10
@@ -225,10 +225,11 @@ exec --no-startup-id xset -display :0 s off -dpms
 #colors
 set $FOCUS #E3E4E6
 set $UNFOCUS #161616
+set $test #8c9440
 
-# Layout colors 	   	 bord 	bg 	text    indicator (split)
+# Layout colors 	   	 bord 	bg 	    text    indicator (split)
 client.focused 			$FOCUS $FOCUS $UNFOCUS $FOCUS
-client.focused_inactive		$UNFOCUS $UNFOCUS $FOCUS $UNFOCUS
+client.focused_inactive	$UNFOCUS $UNFOCUS $FOCUS $UNFOCUS
 client.unfocused 		$UNFOCUS $UNFOCUS $FOCUS $UNFOCUS
 client.urgent 			$FOCUS $FOCUS $UNFOCUS $FOCUS
 client.background 		$UNFOCUS
