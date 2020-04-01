@@ -3,8 +3,7 @@ configuration {
 	display-run:    "execute";
 	display-window: "window";
 	show-icons:     false;
-    theme : "arc";
-    //theme: "/usr/share/rofi/themes/solarized.rasi";
+    theme : "arc"; 
     lines: 5;
    }
 
