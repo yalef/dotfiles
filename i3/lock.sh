@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+# remove screenshot
+rm -f /home/yalef/scrot*
 # Take a screenshot
 scrot /home/yalef/scrot.png
 # Pixellate 10x
@@ -11,5 +13,4 @@ set -e
 i3lock -i /home/yalef/scrot.png --ignore-empty-password
 xset s off dpms 0 10 0 
 xset s off -dpms
-# remove screenshot
-rm -f /home/yalef/scrot*
+
