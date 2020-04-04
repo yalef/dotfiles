@@ -207,7 +207,7 @@ smart_borders on
 exec --no-startup-id feh --bg-fill ~/.config/Wallpapers/wallpaper22.png
 
 #i3lock
-bindsym ctrl+$mod+l exec --no-startup-id sleep 1 && xset dpms force suspend
+bindsym ctrl+$mod+l exec xset dpms force suspend
 
 #wifi applet
 #sudo pacman -S network-manager-applet
