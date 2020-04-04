@@ -11,6 +11,9 @@ Plug 'jiangmiao/auto-pairs'
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'zchee/deoplete-jedi'  "pip3 install --user jedi pynvim
 "Plug 'dense-analysis/ale'   "pip3 install flake8 autopep8
+
+Plug 'mattn/emmet-vim'
+
 call plug#end()
 filetype plugin indent on
 
