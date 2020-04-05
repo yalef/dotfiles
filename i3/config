@@ -207,7 +207,7 @@ smart_borders on
 exec --no-startup-id feh --bg-fill ~/.config/Wallpapers/wallpaper22.png
 
 #i3lock
-bindsym ctrl+$mod+l exec xset dpms force suspend
+bindsym ctrl+$mod+l exec --no-startup-id sleep 1 && xset dpms force suspend
 
 #wifi applet
 #sudo pacman -S network-manager-applet
@@ -219,7 +219,7 @@ exec --no-startup-id cbatticon -i symbolic
 
 #lock on lid closed
 #sudo pacman -S xss-lock imagemagick
-exec --no-startup-id xss-lock -- ~/.config/i3/lock.sh
+#exec --no-startup-id xss-lock -- ~/.config/i3/lock.sh
 #colors
 set $FOCUS #E3E4E6
 set $UNFOCUS #161616
