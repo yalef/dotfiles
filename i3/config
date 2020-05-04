@@ -161,33 +161,10 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-
-bar {
-    status_command i3blocks -c ~/.config/i3blocks/config 	
-    separator_symbol " "
-    
-    colors { 
-
-	background #000000
-		
-				        #border	 #bckgd	  #foregd
-	focused_workspace	#000000 #000000 #ffffff
-    inactive_workspace 	#000000 #000000 #888888
-
-
-    }
-}
-
 # change volume or toggle mute
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -q sset Master,0 5+ unmute"
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -q sset Master,0 5- unmute"
 bindsym XF86AudioMute exec --no-startup-id "amixer -q sset Master,0 toggle"
-#volume icon
-#sudo pacman -S volumeicon
-exec --no-startup-id volumeicon
 
 #bind for screenshot
 #sudo pacman -S scrot
@@ -206,19 +183,8 @@ smart_borders on
 exec --no-startup-id feh --bg-fill ~/.config/Wallpapers/wallpaper22.png
 
 #i3lock
-bindsym ctrl+$mod+l exec --no-startup-id sleep 1 && xset dpms force suspend
+bindsym ctrl+$mod+l exec --no-startup-id i3lock
 
-#wifi applet
-#sudo pacman -S network-manager-applet
-exec --no-startup-id nm-applet
-
-#battery applet
-#sudo pacman -S cbatticon
-exec --no-startup-id cbatticon -i symbolic
-
-#lock on lid closed
-#sudo pacman -S xss-lock imagemagick
-exec --no-startup-id xss-lock -- ~/.config/i3/lock.sh
 #colors
 set $FOCUS #E3E4E6
 set $UNFOCUS #161616
@@ -231,5 +197,12 @@ client.unfocused 		$UNFOCUS $UNFOCUS $FOCUS $UNFOCUS
 client.urgent 			$FOCUS $FOCUS $UNFOCUS $FOCUS
 client.background 		$UNFOCUS
 
-
+# split mode
 bindsym $mod+q split toggle
+
+# compositor 
+# picom
+exec_always --no-start-up-id picom --config ~/.config/picom/picom.conf
+# polybar
+exec_always --no-start-up-id ~/.config/polybar/launch.sh
+
