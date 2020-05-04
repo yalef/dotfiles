@@ -1,0 +1,11 @@
+configuration {
+  modi: "drun,run";
+  display-drun: "apps";
+  theme: "slate";
+  lines: 5;
+  show-icons:         false;
+  icon-theme:         "Papirus";
+  location: 2;
+  yoffset: 30;
+  xoffset: 0;
+}

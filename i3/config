@@ -180,7 +180,7 @@ smart_borders on
 
 #feh
 #sudo pacman -S feh
-exec --no-startup-id feh --bg-fill ~/.config/Wallpapers/wallpaper22.png
+exec --no-startup-id feh --bg-fill ~/.config/Wallpapers/wallpaper4.jng
 
 #i3lock
 bindsym ctrl+$mod+l exec --no-startup-id i3lock
