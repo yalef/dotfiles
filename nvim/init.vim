@@ -51,7 +51,7 @@ set showtabline=1
 
 "lightline settings
 let g:lightline = {
-      \ 'colorscheme': 'powerlineish',
+      \ 'colorscheme': 'one',
       \ 'active': {
       \   'right': [[ 'percent' ],
       \              [ 'fileencoding', 'filetype'] ]}
