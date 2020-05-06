@@ -205,6 +205,6 @@ bindsym $mod+q split toggle
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # polybar
-# install networkmanager_dmenu nmtui nerdfonts
+# install networkmanager_dmenu nmtui nerdfonts tlp
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
