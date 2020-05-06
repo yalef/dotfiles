@@ -27,7 +27,7 @@ if has("termguicolors")
     set termguicolors
 endif
 
-colorscheme base16-classic-dark
+colorscheme base16-atelier-lakeside
 let base16colorspace=256
 set background=dark
 set noshowmode

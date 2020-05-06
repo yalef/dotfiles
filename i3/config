@@ -187,8 +187,7 @@ bindsym ctrl+$mod+l exec --no-startup-id i3lock
 
 #colors
 set $FOCUS #E3E4E6
-set $UNFOCUS #161616
-set $test #8c9440
+set $UNFOCUS #161b1d
 
 # Layout colors 	   	 bord 	bg 	    text    indicator (split)
 client.focused 			$FOCUS $FOCUS $UNFOCUS $FOCUS

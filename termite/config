@@ -5,8 +5,8 @@ font = terminus
 #font = Misc Tamsyn
 
 [colors]
-background = #161616
 
+background = #161b1d
 #cursor= #FDA53C
 
 color0= #222222
