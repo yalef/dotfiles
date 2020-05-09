@@ -180,14 +180,14 @@ smart_borders on
 
 #feh
 #sudo pacman -S feh
-exec --no-startup-id feh --bg-fill ~/.config/Wallpapers/wallpaper4.jng
+exec --no-startup-id feh --bg-fill ~/.config/Wallpapers/wallpaper4.jpg
 
 #i3lock
 bindsym ctrl+$mod+l exec --no-startup-id i3lock
 
 #colors
 set $FOCUS #E3E4E6
-set $UNFOCUS #161b1d
+set $UNFOCUS #212733
 
 # Layout colors 	   	 bord 	bg 	    text    indicator (split)
 client.focused 			$FOCUS $FOCUS $UNFOCUS $FOCUS
