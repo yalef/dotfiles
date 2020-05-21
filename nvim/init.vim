@@ -2,29 +2,22 @@
 
 call plug#begin()
 "UI
+Plug 'ayu-theme/ayu-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'ayu-theme/ayu-vim'
 "Text-editing
 Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 filetype plugin indent on
-
 set laststatus=2
 set number
-syntax on
 syntax enable
-let base16colorspace=256
-
-
 set termguicolors
 let ayucolor='mirage'
-
 colorscheme ayu
-let base16colorspace=256
-set background=dark
 set noshowmode
+set cursorline
 
 set nobackup
 set noswapfile
@@ -67,3 +60,8 @@ map <C-z> u
 map <C-f> /
 "disable command line window
 map q: <Nop>
+
+"tabs
+map <C-t> :tabnew<CR>
+map <C-Left> :tabprevious<CR>
+map <C-Right> :tabnext<CR>

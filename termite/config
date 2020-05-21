@@ -1,13 +1,9 @@
 [options]
-#font = Hack 10
 font = terminus 
-#font = Cascadia Code 10
-#font = Misc Tamsyn
 
 [colors]
 
 background = #212733
-#cursor= #FDA53C
 
 color0= #222222
 color8= #666666
