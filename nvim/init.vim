@@ -6,8 +6,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 "Text-editing
-Plug 'jiangmiao/auto-pairs'
-
+Plug 'JamshedVesuna/vim-markdown-preview'
 call plug#end()
 filetype plugin indent on
 set laststatus=2
