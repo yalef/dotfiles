@@ -9,40 +9,46 @@ Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs' 
 call plug#end()
 filetype plugin indent on
-set laststatus=2
-set number
-syntax enable
-"set termguicolors
 
-if exists('+termguicolors')
+"Basic
+set laststatus=2            "Statusline enabled
+set number                  "Line numbers
+set hidden                  "Required to keep multiple buffers open multiple buffers
+syntax enable               "Syntax highlight enable
+
+if exists('+termguicolors') "True color support
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+set t_Co=256                "256 color support
 
-let ayucolor='mirage'
-colorscheme ayu
-set noshowmode
-set cursorline
+let ayucolor='mirage'       "Colorscheme 
+colorscheme ayu             "Colorscheme
+set noshowmode              "Dont see --INSERT--
+set cursorline              "Highlight active line
+set ruler                   "Always show cursor position
+set cmdheight=2             "Bigger cmd space
 
+set clipboard=unnamedplus       "Copy-paste from nvim to everywhere
+set encoding=utf-8              "Set encoding
+set fileencodings=utf8,cp1251   "Encoding writing in file
+set ignorecase                  "Ignore case when searching
+set smartcase                   "Turn on smartcase
+set expandtab                   "Convert tabs to spaces
+set tabstop=4                   "Tab size - 4 spaces
+set shiftwidth=4                "Indent is 4 spaces
+set autoindent                  "Autotab
+set smartindent                 "Smart autotab
+set showtabline=1               "Show tabline if opened 2 or more tabs
+
+set updatetime=300              "Faster completion
+set timeoutlen=500              "Faster timeout
 set nobackup
 set noswapfile
 set nowritebackup
-set encoding=utf-8
-set fileencodings=utf8,cp1251
 
-" Search configuration
-set ignorecase                    " ignore case when searching
-set smartcase                     " turn on smartcase
-
-" Tab and Indent configuration
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set autoindent  "autotab
-set showtabline=1
-
-"lightline settings
+"Lightline settings
 let g:lightline = {
       \ 'colorscheme': 'ayu_mirage',
       \ 'active': {
@@ -55,19 +61,19 @@ let g:lightline = {
 map <C-n> :NERDTreeToggle<CR>
 
 "Key Bindings
-"install xclip for copy/cut work correctly
-"copy ctrl+c
+"Install xclip for copy/cut work correctly
+"Copy ctrl+c
 map <C-c> "+y
-"paste ctrl+v
+"Paste ctrl+v
 map <C-v> "+p
-"ctrl + z - undo
+"Ctrl + z - undo
 map <C-z> u
-"ctrl + f - find
+"Ctrl + f - find
 map <C-f> /
-"disable command line window
+"Disable command line window
 map q: <Nop>
 
-"tabs
+"Tabs
 map <C-t> :tabnew<CR>
 map <C-Left> :tabprevious<CR>
 map <C-Right> :tabnext<CR>
