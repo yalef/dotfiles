@@ -52,6 +52,7 @@ set nowritebackup
 let g:lightline = {
       \ 'colorscheme': 'ayu_mirage',
       \ 'active': {
+      \   'left':[['mode'], ['readonly', 'absolutepath']],
       \   'right': [[ 'percent' ],
       \              [ 'fileencoding', 'filetype'] ]}
       \ }
