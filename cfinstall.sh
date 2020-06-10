@@ -1,6 +1,15 @@
 #!/bin/bash
+current=$(pwd)
+if [ $current = $HOME/.config ]
+then
+    echo WARNING dont run in .config/
+    exit
+else
+    echo OK
+fi
 
 paths=$(ls -A)
+
 echo $paths
 for i in $paths
 do
@@ -12,13 +21,7 @@ do
     mv $i $HOME/.config
 done
 
-#git clone --no-checkout https://github.com/yalef/dotfiles $HOME/.config/.config.tmp
-#mv $HOME/.config/.config.tmp/.git $HOME/.config/
-#cd $HOME/.config
-#rmdir $HOME/.config/.config.tmp
-#git reset --hard HEAD
+ln $HOME/.config/.tmux.conf $HOME/.tmux.conf
 
-#ln $HOME/.config/.tmux.conf $HOME/.tmux.conf
-
-#chmod +x $HOME/.config/nvim/pluginst.sh
-#sh $HOME/.config/nvim/pluginst.sh
+chmod +x $HOME/.config/nvim/pluginst.sh
+sh $HOME/.config/nvim/pluginst.sh
