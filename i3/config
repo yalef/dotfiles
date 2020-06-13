@@ -162,9 +162,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 # change volume or toggle mute
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -q sset Master,0 5+ unmute"
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -q sset Master,0 5- unmute"
-bindsym XF86AudioMute exec --no-startup-id "amixer -q sset Master,0 toggle"
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 #bind for screenshot
 #sudo pacman -S scrot
@@ -204,6 +204,6 @@ bindsym $mod+q split toggle
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # polybar
-# install networkmanager_dmenu nmtui nerdfonts tlp
+# install networkmanager_dmenu nmtui nerdfonts tlp pulseaudio pavucontrol pamixer
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 

@@ -2,7 +2,6 @@
 font = terminus 
 
 [colors]
-
 background = #212733
 
 color0= #222222
@@ -23,3 +22,4 @@ color14= #42717B
 
 color7= #DDDDDD
 color15= #CCCCCC
+
