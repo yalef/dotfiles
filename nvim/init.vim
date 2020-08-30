@@ -4,7 +4,7 @@ call plug#begin()
 "UI
 Plug 'ayu-theme/ayu-vim'
 Plug 'itchyny/lightline.vim'
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
 "Text-editing
 Plug 'jiangmiao/auto-pairs' 
 call plug#end()
@@ -26,10 +26,11 @@ set t_Co=256                "256 color support
 let ayucolor='mirage'       "Colorscheme 
 colorscheme ayu             "Colorscheme
 set noshowmode              "Dont see --INSERT--
-set cursorline              "Highlight active line
+
 set ruler                   "Always show cursor position
 set cmdheight=2             "Bigger cmd space
 
+set autochdir                   "Set working dir to current file
 set clipboard=unnamedplus       "Copy-paste from nvim to everywhere
 set encoding=utf-8              "Set encoding
 set fileencodings=utf8,cp1251   "Encoding writing in file
@@ -54,13 +55,16 @@ let g:lightline = {
       \ 'active': {
       \   'left':[['mode'], ['readonly', 'absolutepath']],
       \   'right': [[ 'percent' ],
-      \              [ 'fileencoding', 'filetype'] ]}
+      \              [ 'filetype'] ]}
       \ }
 
 "NerdTree settings
 "ctrl+ww - switch
-map <C-n> :NERDTreeToggle<CR>
-
+"u to go upper dir
+"map <C-n> :NERDTreeToggle<CR>
+"let NERDTreeShowHidden=1
+"let NERDTreeMinimalUI=1
+"let NERDTreeAutoDeleteBuffer=1
 "Key Bindings
 "Install xclip for copy/cut work correctly
 "Copy ctrl+c
@@ -72,8 +76,8 @@ map <C-z> u
 "Ctrl + f - find
 map <C-f> /
 "Disable command line window
-map q: <Nop>
-
+map q: <nop>
+map Q <nop>
 "Tabs
 map <C-t> :tabnew<CR>
 map <C-Left> :tabprevious<CR>

@@ -1,5 +1,6 @@
 [options]
-font = terminus 
+# terminus-font-otb
+font = terminus 14
 
 [colors]
 background = #212733
