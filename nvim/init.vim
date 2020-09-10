@@ -4,18 +4,15 @@ call plug#begin()
 "UI
 Plug 'ayu-theme/ayu-vim'
 Plug 'itchyny/lightline.vim'
-"Plug 'scrooloose/nerdtree'
 "Text-editing
 Plug 'jiangmiao/auto-pairs' 
 call plug#end()
 filetype plugin indent on
-
 "Basic
 set laststatus=2            "Statusline enabled
 set number                  "Line numbers
 set hidden                  "Required to keep multiple buffers open multiple buffers
 syntax enable               "Syntax highlight enable
-
 if exists('+termguicolors') "True color support
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -27,7 +24,7 @@ let ayucolor='mirage'       "Colorscheme
 colorscheme ayu             "Colorscheme
 set noshowmode              "Dont see --INSERT--
 
-set ruler                   "Always show cursor position
+set cursorline              "Highlight current line
 set cmdheight=2             "Bigger cmd space
 
 set autochdir                   "Set working dir to current file
@@ -57,14 +54,6 @@ let g:lightline = {
       \   'right': [[ 'percent' ],
       \              [ 'filetype'] ]}
       \ }
-
-"NerdTree settings
-"ctrl+ww - switch
-"u to go upper dir
-"map <C-n> :NERDTreeToggle<CR>
-"let NERDTreeShowHidden=1
-"let NERDTreeMinimalUI=1
-"let NERDTreeAutoDeleteBuffer=1
 "Key Bindings
 "Install xclip for copy/cut work correctly
 "Copy ctrl+c
