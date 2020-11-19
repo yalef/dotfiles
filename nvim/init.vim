@@ -6,6 +6,8 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'itchyny/lightline.vim'
 "Text-editing
 Plug 'jiangmiao/auto-pairs' 
+"Code feature
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 filetype plugin indent on
 "Basic
