@@ -64,9 +64,13 @@ map <C-v> "+p
 map <C-z> u
 "Ctrl + f - find
 map <C-f> /
+"Ctrl + d double line
+map <C-d> yyp
 "Disable command line window
-map q: <nop>
 map Q <nop>
+nnoremap q: <nop> 
+nnoremap q/ <nop> 
+nnoremap q? <nop> 
 "Tabs
 map <C-t> :tabnew<CR>
 map <C-Left> :tabprevious<CR>
