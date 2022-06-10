@@ -1,0 +1,29 @@
+font:
+  normal:
+    family: Iosevka
+    style: Regular
+
+  bold:
+    family: Iosevka
+    style: Bold
+
+  italic:
+    family: Iosevka
+    style: Italic
+
+  bold_italic:
+    family: Iosevka
+    style: Bold Italic
+
+  size: 11
+
+
+
+colors:
+  primary:
+    background: '#212733'
+  
+window:
+  padding:
+   x: 10
+   y: 10
