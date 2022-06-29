@@ -3,3 +3,5 @@ if status is-interactive
 end
 
 set fish_greeting
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
