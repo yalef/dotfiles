@@ -54,5 +54,17 @@ return require('packer').startup(function()
             require('Comment').setup()
         end
     }
+
+    use{
+        "kylechui/nvim-surround",
+        config = function()
+            require("nvim-surround").setup({
+                -- Configuration here
+                -- Usage: 
+                -- ysiw" : test -> "test"
+                -- ysa"( : "test" -> ("test")
+            })
+        end
+    }
 end)
 
