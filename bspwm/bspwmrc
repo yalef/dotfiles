@@ -15,4 +15,3 @@ $HOME/.config/polybar/launch.sh
 feh --randomize --bg-center $HOME/Wallpapers/*
 # bspc rule -a -o firefox desktop=1
 bspc rule -a firefox desktop='^1'
-
