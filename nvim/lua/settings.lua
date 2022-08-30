@@ -34,3 +34,8 @@ opt.shiftwidth = 4
 opt.autoindent = true
 opt.smartindent = true
 
+-- File browsing
+g.netrw_banner = 0
+g.netrw_liststyle = 3
+g.netrw_browse_split = 3
+

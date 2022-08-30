@@ -52,6 +52,8 @@ return require('packer').startup(function()
         'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup()
+            -- gcc for single line
+            -- gc for visual mode
         end
     }
 

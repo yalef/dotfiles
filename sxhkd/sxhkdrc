@@ -146,3 +146,5 @@ XF86MonBrightnessUp
 # Custom keys
 
 # Screen lock
+super + l
+    xtrlock
