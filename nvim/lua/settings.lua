@@ -22,10 +22,10 @@ opt.cursorline = true
 opt.cmdheight = 2
 opt.showtabline = 1
 opt.termguicolors = true
-opt.laststatus=3
+opt.laststatus = 3
 opt.number = true
 opt.showmatch = true
--- opt.colorcolumn = '80'
+opt.colorcolumn = '80'
 
 -- Tabs
 opt.expandtab = true

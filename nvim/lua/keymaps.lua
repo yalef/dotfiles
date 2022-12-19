@@ -14,4 +14,6 @@ map('n', 'q?', '<nop>', default_opts)
 map('n', '<C-t>', ':tabnew<CR>', default_opts)
 map('n', '<C-left>', ':tabprevious<CR>', default_opts)
 map('n', '<C-right>', ':tabnext<CR>', default_opts)
+map('n', '<A-h>', ':tabprevious<CR>', default_opts)
+map('n', '<A-l>', ':tabnext<CR>', default_opts)
 
