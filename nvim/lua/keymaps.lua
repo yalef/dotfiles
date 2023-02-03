@@ -1,5 +1,6 @@
 local map = vim.keymap.set
 local default_opts = {noremap = true, silent = true}
+local telescope = require("telescope.builtin")
 
 -- Double line on CTRL-d
 map("n", "<C-d>", "yyp", default_opts)
@@ -16,4 +17,8 @@ map("n", "<C-left>", ":tabprevious<CR>", default_opts)
 map("n", "<C-right>", ":tabnext<CR>", default_opts)
 map("n", "<A-h>", ":tabprevious<CR>", default_opts)
 map("n", "<A-l>", ":tabnext<CR>", default_opts)
+
+-- Telescope
+map("n", '<leader>ff', telescope.find_files, default_opts)
+map("n", '<leader>fv', telescope.live_grep, default_opts)
 

@@ -9,4 +9,3 @@ https://github.com/lapce/lapce
 * Take a look at tree-sitter
 * Take a look at Telescope
 * Tale a look at nvim-tree.lua
-* Take a look at indent-blankline.nvim

@@ -2,25 +2,38 @@ vim.cmd("packadd packer.nvim")
 
 require("packer").startup(function(use)
     -- Package manager
-    use "wbthomason/packer.nvim"
+    use("wbthomason/packer.nvim")
    
     -- UI
-    use "folke/tokyonight.nvim"
-    use {
-	    "nvim-lualine/lualine.nvim",
-	    requires = { "kyazdani42/nvim-web-devicons", opt = true },
-    }
+    use("folke/tokyonight.nvim")
+    use(
+        {
+	        "nvim-lualine/lualine.nvim",
+	        requires = { "kyazdani42/nvim-web-devicons", opt = true },
+        }
+    )
+    use("lukas-reineke/indent-blankline.nvim")
 
     -- Formatting
-    use "numToStr/Comment.nvim"
-    use "kylechui/nvim-surround"
+    use("numToStr/Comment.nvim")
+    use("kylechui/nvim-surround")
 
     -- LSP
-    use "neovim/nvim-lspconfig"
+    use("neovim/nvim-lspconfig")
+
+    -- Search
+    use(
+        {
+            "nvim-telescope/telescope.nvim",
+            branch = "0.1.x",
+            requires = { "nvim-lua/plenary.nvim" },
+        }
+    )
 end)
 
 -- Plugins configuration
 require("tokyonight").setup()
+require("indent_blankline").setup()
 
 require("lualine").setup {
     options = {
@@ -51,6 +64,17 @@ require("lualine").setup {
     tabline = {},
     extensions = {}
 }
+
+require("telescope").setup({
+    pickers = {
+        find_files = {
+            theme = "dropdown",
+        },
+        live_grep = {
+            theme = "dropdown",
+        },
+    },
+})
 
 require("Comment").setup()
 require("nvim-surround").setup()
