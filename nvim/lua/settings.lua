@@ -7,7 +7,7 @@ local cmd = vim.cmd
 
 -- General
 opt.autochdir = true
-opt.clipboard = 'unnamedplus'
+opt.clipboard = "unnamedplus"
 opt.ignorecase = true
 opt.smartcase = true
 opt.hidden = true
@@ -25,7 +25,9 @@ opt.termguicolors = true
 opt.laststatus = 3
 opt.number = true
 opt.showmatch = true
-opt.colorcolumn = '80'
+opt.colorcolumn = "80"
+opt.linebreak = true
+cmd.colorscheme("tokyonight")
 
 -- Tabs
 opt.expandtab = true
@@ -38,4 +40,3 @@ opt.smartindent = true
 g.netrw_banner = 0
 g.netrw_liststyle = 3
 g.netrw_browse_split = 3
-
