@@ -1,0 +1,27 @@
+theme = "ayu_mirage"
+
+[editor]
+cursorline = true
+auto-format = false
+rulers = [79]
+bufferline = "multiple"
+
+[editor.statusline]
+left = ["mode", "file-name"]
+right = ["position-percentage", "position"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "block"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+character = "|"
+skip-levels = 1
