@@ -39,3 +39,4 @@ end
 set fish_greeting
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+alias ls="ls -AC --color --group-directories-first"

@@ -15,12 +15,12 @@ font:
     family: Iosevka
     style: Bold Italic
 
-  size: 18
+  size: 14
 
 colors:
   # Default colors
   primary:
-    background: '0x24283b'
+    background: '0x1f2430'
     foreground: '0xc0caf5'
 
   # Normal colors

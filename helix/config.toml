@@ -18,9 +18,6 @@ normal = "block"
 insert = "bar"
 select = "block"
 
-[editor.file-picker]
-hidden = false
-
 [editor.indent-guides]
 render = true
 character = "|"
