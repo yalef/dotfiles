@@ -21,7 +21,5 @@ do
     mv $i $HOME/.config
 done
 
-sudo ln $HOME/.config/.tmux.conf $HOME/.tmux.conf
-
 chmod +x $HOME/.config/nvim/pluginst.sh
 sh $HOME/.config/nvim/pluginst.sh
