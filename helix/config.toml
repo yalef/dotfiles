@@ -22,3 +22,6 @@ select = "block"
 render = true
 character = "|"
 skip-levels = 1
+
+[editor.file-picker]
+hidden = false
