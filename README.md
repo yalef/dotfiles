@@ -1,4 +1,2 @@
 # dotfiles
-## TODO:
-* Take a look at lapce
-https://github.com/lapce/lapce
+Configs for my daily use tools
