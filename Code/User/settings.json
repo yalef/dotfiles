@@ -1,5 +1,4 @@
 {
-    "workbench.colorTheme": "Ayu Mirage",
     "editor.fontSize": 16,
     "editor.renderWhitespace": "boundary",
     "editor.folding": false,
@@ -20,5 +19,6 @@
     "telemetry.telemetryLevel": "off",
     "editor.rulers": [
         80,
-    ]
+    ],
+    "window.zoomLevel": 1
 }

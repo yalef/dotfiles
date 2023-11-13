@@ -12,4 +12,4 @@ mv * $HOME/.config/
 cd $HOME/.config/
 
 # rm repo dir
-rm -r "$CURRENT_DIR"
+rm -rf "$CURRENT_DIR"
