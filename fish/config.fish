@@ -37,6 +37,8 @@ end
     set -g fish_pager_color_description $comment    
 
 set fish_greeting
+set EDITOR hx
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 alias ls="ls -AC --color --group-directories-first"
+alias nnn="nnn -H -d -e -x"
