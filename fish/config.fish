@@ -42,3 +42,6 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 alias ls="ls -AC --color --group-directories-first"
 alias nnn="nnn -H -d -e -x"
+
+# Created by `pipx` on 2024-03-22 11:47:06
+set PATH $PATH /home/yalef/.local/bin
