@@ -1,4 +1,0 @@
-(menu-bar-mode -1)  ;; disable menu bar
-(global-display-line-numbers-mode 1)  ;; enable line numbers everwhere
-(hl-line-mode 1) ;; highlight current line  TODO: doesn't work
-(load-theme 'wombat t)
