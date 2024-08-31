@@ -1,5 +1,5 @@
 ### Variables
-#
+
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
@@ -48,10 +48,13 @@ input "type:touchpad" {
     middle_emulation enabled
 }
 
+input "type:keyboard" {
+    xkb_layout us,ru
+    xkb_options grp:alt_shift_toggle
+}
+
 ### Key bindings
-#
-# Basics:
-#
+
     # Start a terminal
     bindsym $mod+Return exec $term
     # Lock screen
@@ -62,6 +65,15 @@ input "type:touchpad" {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+
+    # Manage brightness
+    bindsym XF86MonBrightnessDown exec brightnessctl set $(expr $(brightnessctl get) - 10)
+    bindsym XF86MonBrightnessUp exec brightnessctl set $(expr $(brightnessctl get) + 10)
+
+    # Manage volume
+    bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle 
+    bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-
+    bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -163,9 +175,8 @@ input "type:touchpad" {
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
-#
+
 # Resizing containers:
-#
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
@@ -188,16 +199,11 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
 # Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command swayrbar
 
     colors {
         statusline #ffffff
@@ -206,4 +212,8 @@ bar {
     }
 }
 
-include /etc/sway/config.d/*
+# Autostart
+exec_always pipewire
+
+# Floating windows
+for_window [app_id="wpa_cli"] floating enable
