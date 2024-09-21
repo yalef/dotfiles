@@ -1,4 +1,4 @@
-theme = "ayu_mirage"
+theme = "gruvbox_light"
 
 [editor]
 cursorline = true

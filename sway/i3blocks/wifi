@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$(iw dev | grep 'ssid')" ]; then
+    raw_wifi=$(iw dev | grep 'ssid' | awk '{print $2}')
+else
+    raw_wifi=$("Not connected")
+fi
+echo "Connection: $raw_wifi"

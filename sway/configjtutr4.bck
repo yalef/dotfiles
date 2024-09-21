@@ -1,5 +1,5 @@
 ### Variables
-
+#
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
@@ -12,16 +12,20 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu $HOME/.config/sway/bemenu.sh | xargs swaymsg exec --
+set $menu bemenu-run | xargs swaymsg exec --
 # Lock command
 set $lock swaylock
 
 ### Output configuration
-
+#
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $HOME/Images/Wallpapers/wp1.png fill
-# Pointer configuration
-seat seat0 xcursor_theme Adwaita 24
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Idle configuration
 #
@@ -44,13 +48,10 @@ input "type:touchpad" {
     middle_emulation enabled
 }
 
-input "type:keyboard" {
-    xkb_layout us,ru
-    xkb_options grp:alt_shift_toggle
-}
-
 ### Key bindings
-
+#
+# Basics:
+#
     # Start a terminal
     bindsym $mod+Return exec $term
     # Lock screen
@@ -61,15 +62,6 @@ input "type:keyboard" {
 
     # Start your launcher
     bindsym $mod+d exec $menu
-
-    # Manage brightness
-    bindsym XF86MonBrightnessDown exec brightnessctl set $(expr $(brightnessctl get) - 10)
-    bindsym XF86MonBrightnessUp exec brightnessctl set $(expr $(brightnessctl get) + 10)
-
-    # Manage volume
-    bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle 
-    bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-
-    bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -171,8 +163,9 @@ input "type:keyboard" {
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
-
+#
 # Resizing containers:
+#
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
@@ -195,45 +188,22 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# Colors
-set $bg #fbf1c7        
-set $bg2 #ebdbb2
-set $bg3 #d5c4a1
-set $bg4 #bdae93
-set $fg #3c3836        
-set $red #fb4934       
-set $green #b8bb26     
-set $yellow #fabd2f    
-set $blue #83a598      
-set $purple #d3869b    
-set $aqua #8ec07c      
-set $orange #fe8019    
-
-
-set $gray #a89984      
-set $dark_gray #7c6f64 
-set $light_gray #ebdbb2 
-
+#
 # Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
-    status_command i3blocks -c $HOME/.config/sway/i3blocks/i3blocks.conf
+
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
     colors {
-        statusline $fg
-        background $bg
-        inactive_workspace $bg3 $bg3 $fg
-        focused_workspace $bg3 $fg $bg3
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
 
-# Windows
-# class                 border   bground  text    indicator  child_border
-client.focused          $bg2     $bg2     $fg     $bg2       $bg2
-client.unfocused        $bg4     $bg4     $fg     $bg4       $bg4
-
-# Autostart
-exec_always pipewire
-
-# Floating windows
-for_window [app_id="wpa_cli"] floating enable
+include /etc/sway/config.d/*

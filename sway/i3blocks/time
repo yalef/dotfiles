@@ -1,0 +1,4 @@
+#!/bin/bash
+
+raw_time=$(date +"%H:%M %d/%m/%Y")
+echo $raw_time

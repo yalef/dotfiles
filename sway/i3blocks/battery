@@ -1,0 +1,6 @@
+#!/bin/bash
+
+capacity_raw=$(cat /sys/class/power_supply/BAT1/capacity)
+status_raw=$(cat /sys/class/power_supply/BAT1/status)
+
+echo "Battery: $capacity_raw $status_raw"

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+raw_output=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+echo $raw_output
+signal=1
