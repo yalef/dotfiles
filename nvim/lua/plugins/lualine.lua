@@ -8,7 +8,6 @@ return {
             component_separators = { left = '', right = ''},
             section_separators = { left = '', right = ''},
             disabled_filetypes = {
-                "CHADTree",
                 "neo-tree",
                 "Telescope",
             },
@@ -24,7 +23,7 @@ return {
         },
         sections = {
             lualine_a = {'mode'},
-            lualine_b = {'filename'},
+            lualine_b = {{'filename', path = 1}},
             lualine_c = {},
             lualine_x = {'branch'},
             lualine_y = {'progress'},
@@ -39,8 +38,14 @@ return {
             lualine_z = {}
         },
         tabline = {
-            lualine_a = {},
-            lualine_b = {'buffers'},
+            lualine_a = {{
+                'buffers',
+                buffers_color = {
+                    active = 'lualine_a_normal',
+                    inactive = 'lualine_b_normal',
+                },
+            }},
+            lualine_b = {},
             lualine_c = {},
             lualine_x = {},
             lualine_y = {},

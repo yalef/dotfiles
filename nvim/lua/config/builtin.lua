@@ -7,7 +7,7 @@ vim.opt.listchars = {       -- display spaces and tabs as characters
     space = "•",
     tab = "|-",
 }
-vim.opt.list = true
+vim.opt.list = true         -- enable custom chars for spaces and tabs
 vim.opt.fillchars:append(   -- replace ~ symbol with empthiness
     { eob = " " }
 )

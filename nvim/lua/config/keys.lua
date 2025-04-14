@@ -1,3 +1,4 @@
+-- Buffers
 vim.keymap.set(
     'n',
     '<c-b>n',
@@ -16,3 +17,4 @@ vim.keymap.set(
     '<cmd>bd<cr>',
     { desc = 'Close buffer' }
 )
+
