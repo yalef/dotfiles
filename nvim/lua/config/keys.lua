@@ -17,4 +17,9 @@ vim.keymap.set(
     '<cmd>bd<cr>',
     { desc = 'Close buffer' }
 )
-
+vim.keymap.set(
+    'n',
+    '<c-b>o',
+    '<cmd>%bd|e#<cr>',
+    { desc = 'Close other buffers' }
+)

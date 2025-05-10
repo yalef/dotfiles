@@ -25,12 +25,13 @@ return {
             opts_extend = { "sources.default" }
         },
     },
-    ft = {"python", "lua", "go"},
+    ft = {"python", "lua", "go", "c", "cpp"},
     opts = {
         servers = {
             pylsp = {},
             gopls = {},
             lua_ls = {},
+            clangd = {},
         },
     },
     config = function(_, opts)
