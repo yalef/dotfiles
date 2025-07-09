@@ -20,6 +20,6 @@ vim.keymap.set(
 vim.keymap.set(
     'n',
     '<c-b>o',
-    '<cmd>%bd|e#<cr>',
+    '<cmd>%bd|e#|bnext|bd<cr>',
     { desc = 'Close other buffers' }
 )
