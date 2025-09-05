@@ -13,12 +13,13 @@ return {
         {
             "saghen/blink.cmp",
             opts = {
-                keymap = { preset = 'default' },
+                keymap = { preset = "default" },
+                signature = { enabled = true },
                 appearance = {
-                    nerd_font_variant = 'mono'
+                    nerd_font_variant = "mono"
                 },
                 sources = {
-                    default = { 'lsp', 'path', 'snippets', 'buffer' },
+                    default = { "lsp", "path", "snippets", "buffer" },
                 },
                 fuzzy = { implementation = "lua" }
             },
@@ -28,7 +29,7 @@ return {
     ft = {"python", "lua", "go", "c", "cpp"},
     opts = {
         servers = {
-            pylsp = {},
+            pylsp = { plugins = { flake8 = { enabled = true } } },
             gopls = {},
             lua_ls = {},
             clangd = {},
