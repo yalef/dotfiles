@@ -14,14 +14,14 @@ return {
             "saghen/blink.cmp",
             opts = {
                 keymap = { preset = "default" },
-                signature = { enabled = true },
+                signature = { enabled = false },
                 appearance = {
                     nerd_font_variant = "mono"
                 },
                 sources = {
-                    default = { "lsp", "path", "snippets", "buffer" },
+                    default = { "lsp", "path"},
                 },
-                fuzzy = { implementation = "lua" }
+                fuzzy = { implementation = "lua" },
             },
             opts_extend = { "sources.default" }
         },
@@ -29,17 +29,24 @@ return {
     ft = {"python", "lua", "go", "c", "cpp"},
     opts = {
         servers = {
-            pylsp = { plugins = { flake8 = { enabled = true } } },
+--            pylsp = {
+--                plugins = {
+--                    flake8 = { enabled = true },
+--                    rope = { enabled = true },
+--                    pyflakes = { enabled = true }
+--                }
+--            },
+            pyright = {},
             gopls = {},
             lua_ls = {},
             clangd = {},
         },
     },
     config = function(_, opts)
-        local lspconfig = require("lspconfig")
         for server, config in pairs(opts.servers) do
-            config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
-            lspconfig[server].setup(config)
+            -- config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
+            -- vim.lsp.config[server] = config
+            vim.lsp.enable(server)
         end
    end,
 }

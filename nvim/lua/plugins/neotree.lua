@@ -8,6 +8,6 @@ return {
     },
     lazy = false,
     config = function ()
-        vim.keymap.set("n", "<leader>t", "<cmd>Neotree toggle<cr>", { desc = "Open file tree" })
+        vim.keymap.set("n", "<leader>t", "<cmd>Neotree toggle reveal_force_cwd=true<cr>", { desc = "Open file tree" })
     end
 }
