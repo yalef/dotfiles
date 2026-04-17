@@ -29,13 +29,6 @@ return {
     ft = {"python", "lua", "go", "c", "cpp"},
     opts = {
         servers = {
---            pylsp = {
---                plugins = {
---                    flake8 = { enabled = true },
---                    rope = { enabled = true },
---                    pyflakes = { enabled = true }
---                }
---            },
             pyright = {},
             gopls = {},
             lua_ls = {},
