@@ -10,21 +10,6 @@ return {
                 },
             },
         },
-        {
-            "saghen/blink.cmp",
-            opts = {
-                keymap = { preset = "default" },
-                signature = { enabled = false },
-                appearance = {
-                    nerd_font_variant = "mono"
-                },
-                sources = {
-                    default = { "lsp", "path"},
-                },
-                fuzzy = { implementation = "lua" },
-            },
-            opts_extend = { "sources.default" }
-        },
     },
     ft = {"python", "lua", "go", "c", "cpp"},
     opts = {
@@ -36,9 +21,7 @@ return {
         },
     },
     config = function(_, opts)
-        for server, config in pairs(opts.servers) do
-            -- config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
-            -- vim.lsp.config[server] = config
+        for server, _ in pairs(opts.servers) do
             vim.lsp.enable(server)
         end
    end,

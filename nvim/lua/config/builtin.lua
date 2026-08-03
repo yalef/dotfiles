@@ -2,7 +2,7 @@
 vim.cmd.colorscheme("retrobox")
 vim.opt.number = true       -- set line numbers
 vim.opt.cursorline = true   -- highlight active line
-vim.opt.showtabline = 0     -- always hide tabline
+vim.opt.showtabline = 2     -- always hide tabline
 vim.opt.listchars = {       -- display spaces and tabs as characters
     space = "•",
     tab = "|-",

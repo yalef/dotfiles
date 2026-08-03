@@ -4,11 +4,12 @@ return {
     opts = {
         options = {
             icons_enabled = true,
-            theme = 'auto',
-            component_separators = { left = '', right = ''},
-            section_separators = { left = '', right = ''},
+            theme = "auto",
+            component_separators = { left = "", right = ""},
+            section_separators = { left = "", right = ""},
             disabled_filetypes = {
                 "neo-tree",
+                "fzf-lua",
                 "Telescope",
             },
             ignore_focus = {},
@@ -22,33 +23,34 @@ return {
             }
         },
         sections = {
-            lualine_a = {'mode'},
-            lualine_b = {{'filename', path = 1}},
+            lualine_a = {"mode"},
+            lualine_b = {{"filename", path = 1}},
             lualine_c = {},
-            lualine_x = {'branch'},
-            lualine_y = {'progress'},
-            lualine_z = {'location'}
+            lualine_x = {"branch"},
+            lualine_y = {"progress"},
+            lualine_z = {"location"}
         },
         inactive_sections = {
             lualine_a = {},
             lualine_b = {},
-            lualine_c = {'filename'},
-            lualine_x = {'location'},
+            lualine_c = {"filename"},
+            lualine_x = {"location"},
             lualine_y = {},
             lualine_z = {}
         },
         tabline = {
             lualine_a = {{
-                'buffers',
+                "buffers",
                 buffers_color = {
-                    active = 'lualine_a_normal',
-                    inactive = 'lualine_b_normal',
+                    active = "lualine_b_normal",
+                    inactive = "lualine_a_normal",
                 },
             }},
             lualine_b = {},
             lualine_c = {},
             lualine_x = {},
             lualine_y = {},
+            lualine_z = {}
         },
         winbar = {},
         inactive_winbar = {},
